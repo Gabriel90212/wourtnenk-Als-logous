@@ -1,0 +1,53 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(0, 0, 0);
+}
+.circle
+{
+    position: absolute;
+    top: 350px;
+    width: 400px;
+    height: 10px;
+    border-radius: 100px;
+    background: radial-gradient(circle at center, red, transparent);
+    box-shadow: 0 0 100px red,
+    0 0 100px red,
+    0 0 200px red,
+    0 0 300px red,
+    0 0 400px red,
+    0 0 500px red,
+    0 0 600px red;
+    animation: hue-rotate 5s infinite;
+    z-index: 5;
+}
+@keyframes hue-rotate 
+{    
+    0% 
+    {
+        filter: hue-rotate(0deg);
+    }
+    100% 
+    {
+        filter: hue-rotate(360deg);
+    }
+}
+.logo img
+{
+    position: absolute;
+    top: 55px;
+    left: 310px;
+    width: 400px;
+    height: 250px;
+    z-index: 10;
+}
